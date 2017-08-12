@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('/img/header_img/tag-bg.png')
+            background-image: url('/img/header_img/tag-bg.jpg')
             /*page*/
         
     }
@@ -200,7 +200,7 @@
             <!-- 标签云 -->
             <div id='tag_cloud' class="tags">
                 
-                    <a href="#Android" title="Android" rel="1">Android</a>
+                    <a href="#Android" title="Android" rel="2">Android</a>
                 
             </div>
 
@@ -211,6 +211,21 @@
                 <span class="fa fa-tag listing-seperator" id="Android">
                     <span class="tag-text">Android</span>
                 </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2017/08/12/hello-world/">
+                        <h2 class="post-title">
+                            你好 世界
+                        </h2>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
                 
                   <!-- <li class="listing-item">
                   <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
