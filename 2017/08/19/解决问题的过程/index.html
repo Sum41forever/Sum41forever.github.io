@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          你好 世界 - Sum41forever | 盘古
+          解决问题的过程 - Sum41forever | 盘古
         
     </title>
 
-    <link rel="canonical" href="http://yoursite-url/2017/08/12/hello-world/">
+    <link rel="canonical" href="http://yoursite-url/2017/08/19/解决问题的过程/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -90,14 +90,14 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#Android" title="Android">Android</a>
+                              <a class="tag" href="/tags/#IT" title="IT">IT</a>
                             
                         </div>
-                        <h1>你好 世界</h1>
+                        <h1>解决问题的过程</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by John Doe on
-                            2017-08-12
+                            2017-08-19
                         </span>
                     </div>
                 
@@ -144,13 +144,6 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/about/">About</a>
                         </li>
                         
@@ -159,6 +152,13 @@
                         
                         <li>
                             <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -214,20 +214,48 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2><span id="quick-start">Quick Start</span></h2>
-<h3><span id="create-a-new-post">Create a new post</span></h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3><span id="run-server">Run server</span></h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3><span id="generate-static-files">Generate static files</span></h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3><span id="deploy-to-remote-sites">Deploy to remote sites</span></h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+                <p>分享一个今天解决问题的过程，我觉得这个对自己有一些启发。所以总结了一下。读完大概<code>2.5分钟</code></p>
+<h2><span id="情况描述">情况描述</span></h2>
+<p>点录音的时候。Window停止工作，麦克风无法输入<br>
+<img src="http://onro7cov0.bkt.clouddn.com/ic_question.png" alt="麦克风"></p>
+<h2><span id="解决过程">解决过程</span></h2>
+<ol>
+<li>
+<p><code>据错误分析找到解决方法</code>：大概 dll动态加载模块崩溃（不过我也不知道原理）所以去微软官方技术支持搜索（针对问题去最合适的网站，此处用baidu google，垃圾信息太多）。<br>
+<img src="http://onro7cov0.bkt.clouddn.com/ic_search.png" alt="图2"></p>
+</li>
+<li>
+<p><code>搜完过程发现一个关键点</code>：别人提问是有错误信息的，这个是很关键的（提问的艺术）。所以我们应该找到错误信息，去看错误的模块。<br>
+<img src="http://onro7cov0.bkt.clouddn.com/ic_key.png" alt="图3"></p>
+</li>
+<li>
+<p><code>找到崩溃日志</code>，居然还是中文的。然后发现了是 PenTablet模块错误导致的，<br>
+<img src="http://onro7cov0.bkt.clouddn.com/ic_log.png" alt="图4"></p>
+</li>
+<li>
+<p><code>解决问题，测试</code>：我卸载了和数位板相关的所有驱动，此时系统录音模块不崩溃了。但是就算崩溃修复了以后，麦克风输入依旧没有声音。</p>
+</li>
+<li>
+<p><code>测试后功能未通过，再次分析</code>：我此时怀疑是1.主板问题，2.系统设置问题，3.系统驱动问题 4.麦克风问题。受限于知识的匮乏，可能性会更多，但目前只考虑这4个。</p>
+</li>
+<li>
+<p><code>再次找到问题</code>：从最简单最容易排除的地方入手（排除法）我拿了赛睿耳机测试麦克风，发现赛睿耳机可以说话录音，那最可能的问题在现在用的HYPERX耳机上。但此时还是需要测试，我重装了整个语音驱动，按照google设置了麦克风驱动（结果还是赛睿耳机可用，HYPERX耳机不行）。</p>
+</li>
+<li>
+<p><code>再次解决问题</code>：我很气愤的找卖家要求处理，经过交流我发现耳机上居然有一个小按键（图5）可以禁用语音，我真是醉了。。。<br>
+<img src="http://onro7cov0.bkt.clouddn.com/ic_mc.png" alt="图5"></p>
+</li>
+</ol>
+<h2><span id="问题产生原因">问题产生原因</span></h2>
+<ol>
+<li>数位板的驱动（友基的）导致window的模块加载错误从而使得录音功能模块故障。（这个问题也很巧合，我安装数位板的时候，下了2个驱动，其中一个驱动是针对平板的，而恰恰就是这个平板的驱动导致的麦克风模块错误）。</li>
+<li>按键把语音禁用了，这个新耳机的这个功能第一次见，刚买没注意，之前的耳机也没有，最多带个声卡（HYPERX还是可以的，耳机可以拆下来，出问题了也可以单买单换）。</li>
+</ol>
+<h2><span id="总结">总结</span></h2>
+<ol>
+<li>一个错误往往由于很多个偶然，偶然多了出问题是必然的。</li>
+<li>买的新耳机细节都没好好看，值得检讨</li>
+</ol>
 
                 
 
@@ -267,7 +295,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Quick Start</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Create a new post</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Run server</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">Generate static files</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">情况描述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">解决过程</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">问题产生原因</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">总结</span></a></li></ol>
         
         </div>
       </aside>
@@ -287,7 +315,7 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#Android" title="Android">Android</a>
+                          <a class="tag" href="/tags/#IT" title="IT">IT</a>
                         
                     </div>
                 </section>
@@ -318,8 +346,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "your-disqus-ID";
-    var disqus_identifier = "http://yoursite-url/2017/08/12/hello-world/";
-    var disqus_url = "http://yoursite-url/2017/08/12/hello-world/";
+    var disqus_identifier = "http://yoursite-url/2017/08/19/解决问题的过程/";
+    var disqus_url = "http://yoursite-url/2017/08/19/解决问题的过程/";
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
